@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Registration</title>
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />-->
+	<style type="text/css">
+	body{
+	background-image: var(lg-lightcolor); url('pexels-simon-migaj-747964.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100vw;
+}
+	.container{
+	background-color: #fff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	/* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+	*/
+	overflow: hidden;
+	width: calc(100vw - 65vw);
+	max-width: 100%;
+}
+	.header{
+	
+	padding: 30px, 0;
+}
+	.header h2{
+	color: #222;
+	
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+	.form{
+	padding: 40px;
+	
+}
+.form-control{
+	margin-bottom:20px;
+	position: relative;
+}
+.form-control label{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.form-control input{
+	width: 100%;
+	border: 2px solid #f0f0f0;
+	border-radius: 5px;
+	display: block;
+	font-family: var(--myfont);
+}
+.form-control i{
+	position:absolute;
+	right:12px;
+	top:38px;
+	visibility: hidden;
+}
+	.form .btn {
+	background: #421b06;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	color: #fff;
+	display: block;
+	font-family: var(--my-btn-font);
+	font-size: 16px;
+	padding: 15px 0;
+	margin-top: 20px;
+	width: 100%;
+	font-weight: bold;
+	text-transform:uppercase;
+	transition: all 1s ease;
+	
+}
+.form .btn:hover{
+	background: linear-gradient(to right, #74ebd5, #9face6);
+}
+	@media(max-width:998px){
+	.container{
+		width: calc(1000vw - 35vw);
+		max-width: 100%;
+		
+	}
+}
+	
+	
+	
+	</style>
+</head>
+
+	<body style="background-color:powderblue;" "align-items :center;">
+		<div class="container">
+		<div class="header">
+			<h2>REGISTRATION FORM</h2>
+		</div>
+		<form class="form" id="form" name="myForm">
+			<div class= "form-control">
+				<label>Name</label>
+				<input type="text" name="" id="name1" placeholder="Enter your Full Name">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>Address</label>
+				<input type="text" name="" id="address" placeholder="Enter your Address">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>School</label>
+				<input type="text" name="" id="school" placeholder="Enter your School Name">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>Class</label>
+				<input type="text" name="" id="class1" placeholder="Enter your Class">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			
+			
+			</div>
+			<div class= "form-control">
+				<label>Email</label>
+				<input type="email" name="" id="email" placeholder="Enter your Email ID">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>Phone Number</label>
+				<input type="number" name="" id="phone" placeholder="Enter Phone Number">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>Password</label>
+				<input type="password" name="" id="password" placeholder="Enter Password">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			<div class= "form-control">
+				<label>Confirm Password</label>
+				<input type="password" name="" id="cpassword" placeholder="Enter Password again">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div>
+			
+		
+		
+				<!--<input type="submit" name="" class="btn" id="submit" value="Submit">-->
+				<button onclick="myFunction()" class="submit">Submit</button>
+				
+		</form>
+		<p id="demo"></p>
+		<script>
+		/*
+		<const form = document.getElementById('form');
+		const name1 = document.getElementById('name1');
+		const address = document.getElementById('address');
+		const school = document.getElementById('school');
+		const class1 = document.getElementById('class1');
+		const email = document.getElementById('email');
+		const phone = document.getElementById('phone');
+		const password = document.getElementById('password');
+		const cpassword = document.getElementById('cpassword');
+		
+		form.addEventListener('submit', (event) =>{
+		event.preventDefault();
+		validate();
+		})
+		
+		const validate = () => {
+		const name1 = name1.value.trim();
+		const address = address.value.trim();
+		const school = school.value.trim();
+		const class1 = class1.value.trim();
+		const email = email.value.trim();
+		const phone = phone.value.trim();
+		const password = password.value.trim();
+		const cpassword = cpassword.value.trim();
+		} 
+		
+		//name_validation
+		function validateForm() {
+			var x = document.forms["myForm"]["name1"].value;
+			if (x == "") {
+				alert("Name must be filled out");
+				return false;
+  }		
+		*/
+		function myFunction() {
+  var inpObj = document.getElementById("name1");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+  } else {
+    document.getElementById("demo").innerHTML = "Input OK";
+  } 
+} 
+</script>
+	</body>
+	
+
+</html>
